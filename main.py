@@ -100,28 +100,51 @@ from idlelib.replace import replace
 # print_without_duplicates("Ага, жду")
 
 #10
-persons = {}
+# persons = {}
+#
+# def add_friends(name_of_person, list_of_friends):
+#     a = persons.get(name_of_person)
+#     if a:
+#         persons[name_of_person] = a + list_of_friends
+#     else:
+#         persons[name_of_person] = list_of_friends
+#
+# def are_friends(name_of_person1, name_of_person2):
+#     if name_of_person2 in persons[name_of_person1]:
+#         return True
+#     return False
+#
+# def print_friends(name_of_person):
+#     s = reversed(persons[name_of_person])
+#     for i in s:
+#         print(i, end=' ')
+#     print()
+#
+# add_friends("Алла", ["Марина", "Иван"])
+# print(are_friends("Алла", "Мария"))
+# add_friends("Алла", ["Мария"])
+# print(are_friends("Алла", "Мария"))
 
-def add_friends(name_of_person, list_of_friends):
-    a = persons.get(name_of_person)
-    if a:
-        persons[name_of_person] = a + list_of_friends
-    else:
-        persons[name_of_person] = list_of_friends
-
-def are_friends(name_of_person1, name_of_person2):
-    if name_of_person2 in persons[name_of_person1]:
-        return True
-    return False
-
-def print_friends(name_of_person):
-    s = reversed(persons[name_of_person])
-    for i in s:
-        print(i, end=' ')
-    print()
-
-add_friends("Алла", ["Марина", "Иван"])
-print(are_friends("Алла", "Мария"))
-add_friends("Алла", ["Мария"])
-print(are_friends("Алла", "Мария"))
 #11
+keys = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
+values = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I']
+
+def to_roman(n):
+    pointer = 0
+    result = ''
+    while n > 0:
+        while n >= keys[pointer]:
+            n -= keys[pointer]
+            result += values[pointer]
+        pointer += 1
+    return result
+
+def roman():
+    global one, two, three
+
+    three = one + two
+    print(to_roman(one), "+", to_roman(two), "=", to_roman(three))
+
+one = 5
+two = 4
+roman()
