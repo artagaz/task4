@@ -196,10 +196,18 @@ from idlelib.replace import replace
 # print(*sequence)
 
 #17
-def mirror(arr):
-    mirrored_part = arr[::-1]
-    arr.extend(mirrored_part)
+# def mirror(arr):
+#     mirrored_part = arr[::-1]
+#     arr.extend(mirrored_part)
+#
+# arr = [1, 2]
+# mirror(arr)
+# print(*arr)
 
-arr = [1, 2]
-mirror(arr)
-print(*arr)
+#18
+# def from_string_to_list(string, container):
+#     container.extend(string.split())
+#
+# a = [1, 2, 'abc']
+# from_string_to_list("1 3 99 52", a)
+# print(*a)
