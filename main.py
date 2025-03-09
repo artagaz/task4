@@ -126,25 +126,80 @@ from idlelib.replace import replace
 # print(are_friends("Алла", "Мария"))
 
 #11
-keys = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
-values = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I']
+# keys = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
+# values = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I']
+#
+# def to_roman(n):
+#     pointer = 0
+#     result = ''
+#     while n > 0:
+#         while n >= keys[pointer]:
+#             n -= keys[pointer]
+#             result += values[pointer]
+#         pointer += 1
+#     return result
+#
+# def roman():
+#     global one, two, three
+#
+#     three = one + two
+#     print(to_roman(one), "+", to_roman(two), "=", to_roman(three))
+#
+# one = 5
+# two = 4
+# roman()
 
-def to_roman(n):
-    pointer = 0
-    result = ''
-    while n > 0:
-        while n >= keys[pointer]:
-            n -= keys[pointer]
-            result += values[pointer]
-        pointer += 1
-    return result
+#12
 
-def roman():
-    global one, two, three
+#13
+# arr = ['1', '3', '4', '2']
+# arr2 = ['1', '3', '4', '2']
+#
+# arr.sort() # меняет исходный массив
+# print(arr)
+#
+# arr_sorted = sorted(arr2) # создает новый массив
+# print(arr2)
+# print(arr_sorted)
 
-    three = one + two
-    print(to_roman(one), "+", to_roman(two), "=", to_roman(three))
+#14
+# делит массив на чётные и нечётные числа
+# numbers = [2, 5, 7, 7, 8, 4, 1, 6]
+# odd = []
+# even = []
+# for number in numbers:
+#     if number % 2 == 0:
+#         even.append(number)
+#     else:
+#         odd.append(number)
+# print(odd)
+# print(even)
 
-one = 5
-two = 4
-roman()
+#15
+# fractal = []
+# def create_fractal(rep):
+#     global fractal
+#     for i in range(0,rep):
+#         fractal.extend([0, fractal, fractal, 2])
+#     print(fractal)
+#
+# create_fractal(2)
+
+#16
+# def continue_fibonacci_sequence(sequence, n):
+#     for i in range(n):
+#         next_element = sequence[-1] + sequence[-2]
+#         sequence.append(next_element)
+#
+# sequence = [1, 1, 2, 3, 5]
+# continue_fibonacci_sequence(sequence, 5)
+# print(*sequence)
+
+#17
+def mirror(arr):
+    mirrored_part = arr[::-1]
+    arr.extend(mirrored_part)
+
+arr = [1, 2]
+mirror(arr)
+print(*arr)
