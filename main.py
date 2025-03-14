@@ -211,3 +211,61 @@ from idlelib.replace import replace
 # a = [1, 2, 'abc']
 # from_string_to_list("1 3 99 52", a)
 # print(*a)
+
+#19
+# import numpy
+# def transpose(matrix):
+#     matrix[:] = numpy.transpose(matrix)
+#
+# matrix = [[1,5], [3, 4], [2, 45]]
+# transpose(matrix)
+# for line in matrix:
+#     print(*line)
+
+#20
+# def swap(first, second):
+#     first[:], second[:] = second[:], first[:]
+#
+# first = [1, 2, 3]
+# second = [4, 5, 6]
+# first_content = first[:]
+# second_content = second[:]
+# swap(first, second)
+# print(first, second_content, first == second_content)
+# print(second, first_content, second == first_content)
+
+#21
+# def defractalize(fractal):
+#     fractal[:] = [x for x in fractal if x is not fractal]
+#
+# fractal = [2, 5]
+# fractal.append(fractal)
+# fractal.append(3)
+# fractal.append(fractal)
+# fractal.append(9)
+# defractalize(fractal)
+# print(fractal)
+
+#22
+# def fractal_print(fractal):
+#   print('[' + ', '.join(map(str, fractal)) + ']')
+#
+# fractal = [3]
+# fractal.append(fractal)
+# fractal.append(2)
+# fractal_print(fractal)
+
+#23
+# def matrix(n=None,m=None,a=0):
+#     if n==None and m==None:
+#         n=1
+#         m=1
+#     elif m==None:
+#         m=n
+#     return [[a for i in range(m)] for j in range(n)]
+#
+# rows = matrix(2)
+# for row in rows:
+#     print(*row)
+
+#24
